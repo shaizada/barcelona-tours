@@ -39,7 +39,7 @@ const TOURS = [
   {
     id: "montjuic",
     title: "Монжуик и панорамы",
-    desc: "Лучшие виды на город",
+    desc: "Лучшие виды на город,для отдыха то самое место",
     price: 39,
     image: "/tours/MONZH.jpg",
   },
