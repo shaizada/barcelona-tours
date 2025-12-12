@@ -1,0 +1,10 @@
+[
+  {
+    "id": "7ee8a3ec-7d3d-4a04-bade-d086a2d69b77",
+    "name": "Baktiyar",
+    "email": "baks_0614@mail.ru",
+    "passwordHash": "95536500c9402d99ce987c268a75847c3ae7361ba4316a469c789db5ea4d7608",
+    "salt": "3b74bb9222f488774cd79a76a694f74b",
+    "createdAt": "2025-12-12T08:26:52.179Z"
+  }
+]
