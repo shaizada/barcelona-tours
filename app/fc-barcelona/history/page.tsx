@@ -4,8 +4,9 @@ export default function HistoryPage() {
       <div className="glass p-10">
         <h1 className="text-3xl font-bold mb-4">История FC Barcelona</h1>
         <p className="text-gray-700 mb-4">
-          FC Barcelona основан в 1899 году. Клуб стал символом Каталонии
-          и философии атакующего футбола.
+          История ФК «Барселона»
+
+Футбольный клуб «Барселона» (FC Barcelona) был основан 29 ноября 1899 года в Барселоне швейцарцем Жоаном (Хансом) Гампером. С первых лет клуб стал символом не только футбола, но и каталонской идентичности, что отражено в девизе «Més que un club» — «Больше, чем клуб».
         </p>
 
         <ul className="list-disc pl-5 text-gray-700 space-y-2">
