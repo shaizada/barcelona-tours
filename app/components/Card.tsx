@@ -1,4 +1,13 @@
 import Link from "next/link";
+import React from "react";
+
+type CardProps = {
+  title: string;
+  subtitle?: string;
+  right?: React.ReactNode;
+  href?: string;
+  children?: React.ReactNode; // ✅ НЕобязательный
+};
 
 export function Card({
   title,
@@ -6,25 +15,28 @@ export function Card({
   right,
   href,
   children,
-}: {
-  title: string;
-  subtitle?: string;
-  right?: React.ReactNode;
-  href?: string;
-  children?: React.ReactNode;
-}) {
-  const Body = (
-    <div className="rounded-2xl border border-slate-200/60 dark:border-slate-800 bg-white/90 dark:bg-slate-900/70 shadow-sm hover:shadow-md transition p-5">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-bold">{title}</h3>
-          {subtitle ? <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{subtitle}</p> : null}
-        </div>
-        {right}
-      </div>
-      {children ? <div className="mt-4">{children}</div> : null}
-    </div>
-  );
+}: CardProps) {
+  const Wrapper = href ? Link : "div";
 
-  return href ? <Link href={href}>{Body}</Link> : Body;
+  return (
+    <Wrapper
+      href={href as any}
+      className="block rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-md transition"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <h3 className="font-bold text-lg">{title}</h3>
+          {subtitle && (
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+              {subtitle}
+            </p>
+          )}
+        </div>
+
+        {right && <div>{right}</div>}
+      </div>
+
+      {children && <div className="mt-4">{children}</div>}
+    </Wrapper>
+  );
 }
