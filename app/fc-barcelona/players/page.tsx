@@ -2,7 +2,7 @@ const players = [
   { number: 9, name: "Lewandowski", position: "Нападающий" },
   { number: 8, name: "Pedri", position: "Атакующий Полузащитник" },
   { number: 6, name: "Gavi", position: "Полузащитник" },
-  { number: 1, name: "Ter Stegen", position: "Вратарь" },
+  { number: 1, name: "Ter Stegen", position: "Лучший Вратарь" },
 ];
 
 export default function PlayersPage() {
